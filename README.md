@@ -10,4 +10,4 @@ Currently, two official plugins are available:
 ## Project Setup
 For detailed setup instructions, see
 [Project Setup Guide]
-(PROJECT_SETUP_GUIDE.md)
+PROJECT_SETUP_GUIDE.md
