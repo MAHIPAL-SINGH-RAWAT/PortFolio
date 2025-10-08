@@ -429,8 +429,8 @@ body {
 }
 
 .profile-image img {
-  width: 100px;
-  height: 100px;
+  width: 250px;
+  height: 250px;
   border-radius: 24px;
   object-fit: cover;
   border: 3px solid var(--primary);
@@ -511,17 +511,20 @@ body {
   margin-bottom: 32px;
   line-height: 1.7;
   font-size: 16px;
+  text-align: justify;
 }
 
 .description-expanded {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  text-align: justify;
 }
 
 .description-expanded.expanded {
   max-height: 200px;
   margin-top: 16px;
+  text-align: justify;
 }
 
 .read-more-btn {
@@ -1236,8 +1239,8 @@ body {
   }
 
   .profile-image img {
-    width: 120px;
-    height: 120px;
+    width: 180px;
+    height: 180px;
   }
 
   .profile-name {
@@ -1251,7 +1254,7 @@ body {
   }
 
   .profile-description {
-    text-align: center;
+    
     font-size: 15px;
   }
 
@@ -1389,8 +1392,8 @@ body {
   }
 
   .profile-image img {
-    width: 90px;
-    height: 90px;
+    width: 220px;
+    height: 220px;
   }
 
   .profile-name {
@@ -1427,8 +1430,8 @@ body {
   }
 
   .profile-image img {
-    width: 110px;
-    height: 110px;
+    width: 280px;
+    height: 280px;
   }
 
   .profile-name {
@@ -1472,8 +1475,8 @@ body {
   }
 
   .profile-image img {
-    width: 80px;
-    height: 80px;
+    width: 120px;
+    height: 120px;
   }
 
   .status-indicator {
@@ -1495,6 +1498,7 @@ body {
   .profile-description {
     font-size: 14px;
     margin-bottom: 20px;
+    text-align: center;
   }
 
   .social-links {

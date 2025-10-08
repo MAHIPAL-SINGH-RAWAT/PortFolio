@@ -8,6 +8,7 @@ import {
   FiChevronDown,
   FiChevronUp,
 } from 'react-icons/fi';
+import mahipal from "../assets/mahipal.png";
 
 const ProfileSection = () => {
   const [currentTitle, setCurrentTitle] = useState(0);
@@ -65,7 +66,7 @@ const ProfileSection = () => {
       <div className="profile-content">
         <div className="profile-image">
           <img
-            src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&dpr=2"
+            src={mahipal}
             alt="Mahipal Singh Rawat"
           />
           <div className="status-indicator"></div>
