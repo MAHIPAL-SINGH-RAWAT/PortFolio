@@ -1,9 +1,23 @@
 import React, { useState, useEffect } from 'react';
-import { FiLinkedin, FiGithub, FiMail, FiPhone, FiMapPin } from 'react-icons/fi';
+import {
+  FiLinkedin,
+  FiGithub,
+  FiMail,
+  FiPhone,
+  FiMapPin,
+  FiChevronDown,
+  FiChevronUp,
+} from 'react-icons/fi';
 
 const ProfileSection = () => {
   const [currentTitle, setCurrentTitle] = useState(0);
-  const titles = ['Frontend Developer', 'MERN Stack Developer', 'Artist', 'Photographer'];
+  const [isExpanded, setIsExpanded] = useState(false);
+  const titles = [
+    'Frontend Developer',
+    'MERN Stack Developer',
+    'Artist',
+    'Photographer',
+  ];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -13,32 +27,36 @@ const ProfileSection = () => {
     return () => clearInterval(interval);
   }, []);
 
+  const toggleExpanded = () => {
+    setIsExpanded(!isExpanded);
+  };
+
   const socialLinks = [
-    { 
-      icon: FiLinkedin, 
-      label: 'LinkedIn', 
-      href: 'https://www.linkedin.com/in/mahipal-rawat-a82496229/' 
+    {
+      icon: FiLinkedin,
+      label: 'LinkedIn',
+      href: 'https://www.linkedin.com/in/mahipal-rawat-a82496229/',
     },
-    { 
-      icon: FiGithub, 
-      label: 'GitHub', 
-      href: 'https://github.com/MAHIPAL-SINGH-RAWAT' 
+    {
+      icon: FiGithub,
+      label: 'GitHub',
+      href: 'https://github.com/MAHIPAL-SINGH-RAWAT',
     },
-    { 
-      icon: FiMail, 
-      label: 'Email', 
-      href: 'mailto:mahipalrwtt269@gmail.com' 
+    {
+      icon: FiMail,
+      label: 'Email',
+      href: 'mailto:mahipalrwtt269@gmail.com',
     },
-    { 
-      icon: FiPhone, 
-      label: 'Phone', 
-      href: 'tel:+919521203215' 
+    {
+      icon: FiPhone,
+      label: 'Phone',
+      href: 'tel:+919521203215',
     },
-    { 
-      icon: FiMapPin, 
-      label: 'Location', 
+    {
+      icon: FiMapPin,
+      label: 'Location',
       href: '#',
-      text: 'Pilani, Rajasthan'
+      text: 'Pilani, Rajasthan',
     },
   ];
 
@@ -52,19 +70,46 @@ const ProfileSection = () => {
           />
           <div className="status-indicator"></div>
         </div>
-        
+
         <div className="profile-info">
           <h1 className="profile-name">Mahipal Singh Rawat</h1>
-          <p className="profile-title animated-title">
-            {titles[currentTitle]}
-          </p>
-          <p className="profile-description">
-            Passionate Frontend Developer specializing in creating modern, responsive web applications using React.js, JavaScript, HTML5, and CSS3. 
-            Currently pursuing B.Tech in Computer Science at B K Birla Institute of Engineering & Technology, Pilani, Rajasthan. 
-            Experienced in building dynamic user interfaces with smooth animations and optimized performance. 
-            Skilled in modern development tools including Vite.js, Git, and various deployment platforms.
-          </p>
-          
+          <p className="profile-title animated-title">{titles[currentTitle]}</p>
+          <div className="profile-description">
+            <p className="description-preview">
+              Passionate Frontend Developer specializing in creating modern,
+              responsive web applications using React.js, JavaScript, HTML5, and
+              CSS3. Currently pursuing B.Tech in Computer Science at B K Birla
+              Institute of Engineering & Technology, Pilani, Rajasthan.
+              <span className="mobile-only">
+                <button onClick={toggleExpanded} className="read-more-btn">
+                  {isExpanded ? (
+                    <>
+                      <span> Read Less</span>
+                      <FiChevronUp size={16} />
+                    </>
+                  ) : (
+                    <>
+                      <span> Read More</span>
+                      <FiChevronDown size={16} />
+                    </>
+                  )}
+                </button>
+              </span>
+            </p>
+            <div
+              className={`description-expanded ${isExpanded ? 'expanded' : ''}`}
+            >
+              <p>
+                Experienced in building dynamic user interfaces with smooth
+                animations and optimized performance. Skilled in modern
+                development tools including Vite.js, Git, and various deployment
+                platforms. I’m always exploring new technologies to improve web
+                performance and user experience. My goal is to create digital
+                experiences that are fast, accessible, and impactful.
+              </p>
+            </div>
+          </div>
+
           <div className="social-links">
             {socialLinks.map((link) => (
               <a

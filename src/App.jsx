@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { FiHome, FiFolder, FiUser } from 'react-icons/fi';
 import Navigation from './components/Navigation';
 import ProfileSection from './components/ProfileSection';
 import RecentPosts from './components/RecentPosts';

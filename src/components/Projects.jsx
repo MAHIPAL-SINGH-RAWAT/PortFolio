@@ -1,5 +1,5 @@
 import React from 'react';
-import { FiHome, FiFolder, FiUser } from 'react-icons/fi';
+import { FiHome, FiFolder, FiFileText } from 'react-icons/fi';
 
 const Projects = ({ setActiveSection }) => {
   const handleNavigation = (section) => {
@@ -73,7 +73,7 @@ const Projects = ({ setActiveSection }) => {
               <span>Projects</span>
             </button>
             <button onClick={() => handleNavigation('resume')} className="quick-nav-btn">
-              <FiUser size={16} />
+              <FiFileText size={16} />
               <span>Resume</span>
             </button>
           </div>
