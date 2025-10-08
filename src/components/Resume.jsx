@@ -101,12 +101,12 @@ const Resume = ({ setActiveSection }) => {
               <p className="resume-meta">
                 React & CSS •{' '}
                 <a
-                  href="https://mahipalrawat.netlify.app"
+                  href="https://mahipalsinghrawat.netlify.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="project-link-inline"
                 >
-                  mahipalrawat.netlify.app
+                  mahipalsinghrawat.netlify.app
                 </a>
               </p>
               <p className="resume-description">
